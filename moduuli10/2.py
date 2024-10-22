@@ -36,10 +36,9 @@ class Talo:
     def __init__(self, alin_kerros, ylin_kerros, hissien_maara):
         self.alin_kerros = alin_kerros
         self.ylin_kerros = ylin_kerros
-        self.hissien_maara = hissien_maara
         self.hissit = []
         for i in range(hissien_maara):
-            uusi_hissi = Hissi(self.alin_kerros, self.ylin_kerros)
+            uusi_hissi = Hissi(alin_kerros, ylin_kerros)
             self.hissit.append(uusi_hissi)
     
     def aja_hissia(self, hissin_numero, kohdekerros):
