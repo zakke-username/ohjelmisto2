@@ -39,7 +39,7 @@ class Talo:
         self.hissien_maara = hissien_maara
         self.hissit = []
         for i in range(hissien_maara):
-            uusi_hissi = Hissi(1,7)
+            uusi_hissi = Hissi(self.alin_kerros, self.ylin_kerros)
             self.hissit.append(uusi_hissi)
     
     def aja_hissia(self, hissin_numero, kohdekerros):
