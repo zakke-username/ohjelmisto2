@@ -1,9 +1,9 @@
 def main():
     uusi_auto = Auto("ABC-123", 142)
-    # uusi_auto.kuljettu_matka = 2000
-    # uusi_auto.kiihdyta(60)
-    # uusi_auto.kulje(1.5)
-    # print(f"Kuljettu matka: {uusi_auto.kuljettu_matka} km")
+    uusi_auto.kuljettu_matka = 2000
+    uusi_auto.kiihdyta(60)
+    uusi_auto.kulje(1.5)
+    print(f"Kuljettu matka: {uusi_auto.kuljettu_matka} km")
 
 
 class Auto:

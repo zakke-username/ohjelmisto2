@@ -6,6 +6,22 @@ def main():
     for i in range(10):
         uusi_auto = Auto(f"ABC-{i+1}", random.randint(100,200))
         autot.append(uusi_auto)
+    #
+    # for i in range(100000):
+    #     kisa = Kilpailu("testi", 8000, autot)
+    #     for a in autot:
+    #         a.huippunopeus = random.randint(100,200)
+    #         a.nopeus = 0
+    #         a.kuljettu_matka = 0
+    #     tunti = 0
+    #     while True:
+    #         kisa.tunti_kuluu()
+    #         if kisa.kilpailu_ohi():
+    #             break
+    #         tunti += 1
+    #
+    # for a in autot:
+    #     print(a.rekisteritunnus, a.voitot)
 
     kisa = Kilpailu("Suuri romuralli", 8000, autot)
     i = 0
@@ -38,10 +54,15 @@ class Kilpailu:
             print(f"{a.rekisteritunnus:16} {a.kuljettu_matka:<16} {a.huippunopeus:<16} {a.nopeus:<16}")
     
     def kilpailu_ohi(self):
+        maalissa = False
         for a in self.autot:
             if a.kuljettu_matka >= self.pituus:
-                return True
-        return False
+                a.voitot += 1
+                maalissa = True
+        if maalissa:
+            return True
+        else:
+            return False
 
 
 class Auto:
@@ -50,6 +71,7 @@ class Auto:
         self.huippunopeus = huippunopeus
         self.nopeus = 0
         self.kuljettu_matka = 0
+        self.voitot = 0
     
     def kiihdyta(self, muutos):
         self.nopeus += muutos
