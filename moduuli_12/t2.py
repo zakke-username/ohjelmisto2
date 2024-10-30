@@ -6,6 +6,7 @@ city = input("Enter a city: ")
 
 coords_request = f"http://api.openweathermap.org/geo/1.0/direct?q={city}&limit=1&appid={api_key}"
 coords_response = requests.get(coords_request).json()
+
 latitude = coords_response[0]["lat"]
 longitude = coords_response[0]["lon"]
 
