@@ -1,7 +1,6 @@
 import requests
-import json
 
-api_key = "fea95d4fdd054096e1c4b516203b3106"
+api_key = ""
 
 city = input("Enter a city: ")
 
