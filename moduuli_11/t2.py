@@ -2,17 +2,14 @@ def main():
     sahkoauto = Sahkoauto("ABC-15", 180, 52.5)
     sahkoauto.kiihdyta(123)
 
-    auto = Polttomoottoriauto("ACD-123", 165, 32.3)
-    auto.kiihdyta(150)
+    bensa_auto = Polttomoottoriauto("ACD-123", 165, 32.3)
+    bensa_auto.kiihdyta(150)
 
     for i in range(3):
         sahkoauto.kulje(1)
-        auto.kulje(1)
+        bensa_auto.kulje(1)
 
-    print(f"Sähköauto kulkenut {sahkoauto.kuljettu_matka} km, polttomoottoriauto kulkenut {auto.kuljettu_matka} km")
-
-    # print(f"Sähköauton rekisteritunnus: {sahkoauto.rekisteritunnus}, huippunopeus: {sahkoauto.huippunopeus}, akkukapasiteetti: {sahkoauto.akkukapasiteetti} kWh")
-    # print(f"Polttomoottoriauton rekisteritunnus: {auto.rekisteritunnus}, huippunopeus: {auto.huippunopeus}, bensatankin koko: {auto.bensatankki} l")
+    print(f"Sähköauto kulkenut {sahkoauto.kuljettu_matka} km, polttomoottoriauto kulkenut {bensa_auto.kuljettu_matka} km")
 
 
 class Auto:
