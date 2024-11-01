@@ -9,25 +9,31 @@ def main():
 class Julkaisu:
     def __init__(self, nimi):
         self.nimi = nimi
+    
+    def tulosta_tiedot(self):
+        print(f"Nimi: {self.nimi}")
 
 
 class Kirja(Julkaisu):
     def __init__(self, nimi, kirjoittaja, sivut):
+        super().__init__(nimi)
         self.kirjoittaja = kirjoittaja
         self.sivut = sivut
-        super().__init__(nimi)
     
     def tulosta_tiedot(self):
-        print(f"Nimi: {self.nimi}, kirjoittaja: {self.kirjoittaja}, sivumäärä: {self.sivut}")
+        super().tulosta_tiedot()
+        print(f"Kirjoittaja: {self.kirjoittaja}")
+        print(f"Sivumäärä: {self.sivut}")
 
 
 class Lehti(Julkaisu):
     def __init__(self, nimi, paatoimittaja):
-        self.paatoimittaja = paatoimittaja
         super().__init__(nimi)
+        self.paatoimittaja = paatoimittaja
 
     def tulosta_tiedot(self):
-        print(f"Nimi: {self.nimi}, päätoimittaja: {self.paatoimittaja}")
+        super().tulosta_tiedot()
+        print(f"Päätoimittaja: {self.paatoimittaja}")
 
 
 main()
