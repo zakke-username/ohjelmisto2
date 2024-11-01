@@ -28,14 +28,14 @@ class Auto:
 
 class Sahkoauto(Auto):
     def __init__(self, rekisteritunnus, huippunopeus, akkukapasiteetti):
-        self.akkukapasiteetti = akkukapasiteetti
         super().__init__(rekisteritunnus, huippunopeus)
+        self.akkukapasiteetti = akkukapasiteetti
 
 
 class Polttomoottoriauto(Auto):
     def __init__(self, rekisteritunnus, huippunopeus, bensatankki):
-        self.bensatankki = bensatankki
         super().__init__(rekisteritunnus, huippunopeus)
+        self.bensatankki = bensatankki
 
 
 main()
