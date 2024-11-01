@@ -1,14 +1,17 @@
 def main():
     sahkoauto = Sahkoauto("ABC-15", 180, 52.5)
-    sahkoauto.kiihdyta(123)
-
     bensa_auto = Polttomoottoriauto("ACD-123", 165, 32.3)
+
+    sahkoauto.kiihdyta(123)
     bensa_auto.kiihdyta(150)
 
     sahkoauto.kulje(3)
     bensa_auto.kulje(3)
 
-    print(f"Sähköauto kulkenut {sahkoauto.kuljettu_matka} km, polttomoottoriauto kulkenut {bensa_auto.kuljettu_matka} km")
+    print("\n")
+    sahkoauto.tulosta_tiedot()
+    print("\n")
+    bensa_auto.tulosta_tiedot()
 
 
 class Auto:
@@ -24,6 +27,9 @@ class Auto:
 
     def kulje(self, tunnit):
         self.kuljettu_matka += tunnit * self.nopeus
+
+    def tulosta_tiedot(self):
+        print(f"Rekisteritunnus {self.rekisteritunnus}\nHuippunopeus: {self.huippunopeus}\nNykyinen nopeus: {self.nopeus}\nKuljettu matka: {self.kuljettu_matka}")
 
 
 class Sahkoauto(Auto):
