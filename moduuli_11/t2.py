@@ -5,9 +5,8 @@ def main():
     bensa_auto = Polttomoottoriauto("ACD-123", 165, 32.3)
     bensa_auto.kiihdyta(150)
 
-    for i in range(3):
-        sahkoauto.kulje(1)
-        bensa_auto.kulje(1)
+    sahkoauto.kulje(3)
+    bensa_auto.kulje(3)
 
     print(f"Sähköauto kulkenut {sahkoauto.kuljettu_matka} km, polttomoottoriauto kulkenut {bensa_auto.kuljettu_matka} km")
 
